@@ -21,6 +21,9 @@ class _SearchPageState extends State<SearchPage> {
         defaultBar: AppBar(
           title: Text("Search"),
         ),
+        onQueryChanged: (query) {
+          print(query);
+        },
       ),
     );
   }
