@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:example/detail.dart';
 import 'package:http/http.dart' as http;
 import 'package:loader_search_bar/loader_search_bar.dart';
 
@@ -103,10 +104,20 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               title: Text(issue.title),
               onTap: () {
-                print("onTap");
+                _detailPressed(context);
               },
             );
           }),
     );
+  }
+
+  void _detailPressed(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        settings: RouteSettings(name: "/detail"),
+        builder: (context) {
+          return DetailPage(title: "tomoki_sun");
+        }));
   }
 }
