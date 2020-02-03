@@ -1,18 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:example/detail.dart';
+import 'package:example/page/detail.dart';
 import 'package:http/http.dart' as http;
+import 'package:example/entity/User.dart';
 import 'package:loader_search_bar/loader_search_bar.dart';
-
-class User {
-  User({
-    this.login,
-    this.avatarUrl,
-  });
-
-  final String login;
-  final String avatarUrl;
-}
 
 class SearchPage extends StatefulWidget {
   SearchPage({Key key, this.title}) : super(key: key);

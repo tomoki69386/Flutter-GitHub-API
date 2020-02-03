@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:example/detail.dart';
-import 'package:example/search.dart';
+import 'package:example/page/detail.dart';
+import 'package:example/page/search.dart';
 import 'package:http/http.dart' as http;
 import 'package:loader_search_bar/loader_search_bar.dart';
 
