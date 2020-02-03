@@ -41,21 +41,20 @@ class _SearchPageState extends State<SearchPage> {
               ),
               title: Text(item.login),
               onTap: () {
-                _detailPressed(context, item.login);
+                _detailPressed(context, item);
               },
             );
           }),
     );
   }
 
-  void _detailPressed(BuildContext context, String username) {
-    print(username);
+  void _detailPressed(BuildContext context, User user) {
     Navigator.push(
         context,
         MaterialPageRoute(
           settings: RouteSettings(name: "/search/detail"),
             builder: (context) {
-              return DetailPage(username: username);
+              return DetailPage(user: user);
             }));
   }
 
