@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:loader_search_bar/loader_search_bar.dart';
 
 void main() => runApp(MyApp());
 
@@ -82,24 +83,27 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      appBar: SearchBar(
+        defaultBar: AppBar(
+          leading: IconButton(
+              icon: Icon(Icons.menu)
+          ),
+          title: Text('Default app bar title'),
+        ),
       ),
       body: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          if (index >= _issues.length) {
-            return null;
-          }
-
-          final issue = _issues[index];
-          return ListTile(
-            leading: ClipOval(
-              child: Image.network(issue.avatarUrl),
-            ),
-            title: Text(issue.title),
-          );
-        },
-      ),
+          itemBuilder: (BuildContext context, int index) {
+            if (index >= _issues.length) {
+              return null;
+            }
+            final issue = _issues[index];
+            return ListTile(
+              leading: ClipOval(
+                child: Image.network(issue.avatarUrl),
+              ),
+              title: Text(issue.title),
+            );
+          }),
     );
   }
 }
