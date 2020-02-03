@@ -102,6 +102,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Image.network(issue.avatarUrl),
               ),
               title: Text(issue.title),
+              onTap: () {
+                print("onTap");
+              },
             );
           }),
     );
