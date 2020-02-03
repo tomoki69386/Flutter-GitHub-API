@@ -1,29 +1,14 @@
-# Flutter
-Flutter勉強メモ
-
-# セットアップ
-Flutter SDK入手してPATH通す
-https://flutter.dev/docs/get-started/install/macos#get-sdk
+# Flutter GitHub API
 
 ```bash
-$ flutter doctor
-```
-
-エラー出たら以下のリンク通り対応していく
-https://flutter.dev/docs/get-started/install/macos#run-flutter-doctor
-
-iOS Simulatorを起動させておくと `No devices available` エラーを回避できる
-```bash
-$  open -a Simulator.app
-```
-
-
-
-# 新規アプリ作成
-
-```bash
-$ flutter create my_app
-$ cd my_app
 $ flutter run
 ```
+
+
+
+# Snapshot
+
+|                    1                    |                    2                    | 3                                       |
+| :-------------------------------------: | :-------------------------------------: | --------------------------------------- |
+| <img src='images/1.png'  width='320' /> | <img src='images/2.png'  width='320' /> | <img src='images/3.png'  width='320' /> |
 
