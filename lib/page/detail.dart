@@ -12,12 +12,25 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Platform.isIOS ? _makeiOS() : _makeAndroid(),
-      body: ListTile(
-        leading: CircleAvatar(
-          child: Image.network(user.avatarUrl),
+      body: _buildBody()
+    );
+  }
+
+  Widget _buildBody() {
+    return ListView(
+      children: <Widget>[
+        Container(
+          child: CircleAvatar(
+            child: Image.network(user.avatarUrl)
+          ),
+          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
         ),
-        title: Text(user.login),
-      ),
+        Container(
+          child: Text(user.login),
+          alignment: Alignment.center,
+          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+        )
+      ],
     );
   }
 
