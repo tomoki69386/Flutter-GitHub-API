@@ -48,6 +48,13 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
 
+  Widget make(BuildContext context) {
+    return Scaffold(
+      
+      body: Text("tomokI-sun"),
+    );
+  }
+
   void _detailPressed(BuildContext context, User user) {
     Navigator.push(
         context,
